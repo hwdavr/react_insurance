@@ -1,4 +1,18 @@
+.header-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.main-header-container {
+    margin-top: 20px;
+    text-align: center;
+}
 .app-title {
     display: inline;
     color: rgb(0, 0, 130);
+}
+.app-title-container {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

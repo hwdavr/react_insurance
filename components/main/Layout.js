@@ -1,13 +1,12 @@
 import React from 'react';
-import Header from './Header';
-import {Container} from 'semantic-ui-react';
+import {Container, Divider} from 'semantic-ui-react';
 import Head from 'next/head';
-import logo from '../assets/thales@2x.png'; // import images
-import './Layout.css';
+import logo from '../../assets/thales@2x.png'; // import images
+import '../Layout.css';
 
 export default (props) => {
     return (
-        <Container style={{marginTop:'20px'}}>
+        <Container className='main-header-container'>
             <Head>
                 <link
                 rel="stylesheet"
@@ -15,20 +14,19 @@ export default (props) => {
                 />
             </Head>
 
-            <div style={{display:'flex', 
-                alignItems:'center', 
-                justifyContent:'space-between'}}>
+            <div className='app-title-container'>
                 <div style={{display:'inline'}}>
-                    <h1 className='app-title'>I</h1>
-                    <h2 className='app-title'>NSURANCE </h2>
+                    <h1 className='app-title'>M</h1>
+                    <h2 className='app-title'>EDI-</h2>
                     <h1 className='app-title'>S</h1>
                     <h2 className='app-title'>HARING</h2>
                 </div>
 
-                <img src={logo} 
-                    style={{height:'44px'}}/>
+                <img src={logo} style={{height:'44px'}}/>
             </div>
-            <Header />
+
+            <Divider fitted></Divider>
+            
             {props.children}
         </Container>
     );
