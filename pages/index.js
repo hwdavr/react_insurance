@@ -19,44 +19,80 @@ class MediCostSharing extends Component {
         return <Card.Group items={items}/>;
     }
 
-    gotoUserEntry() {
-        console.log("Open User Portal");
-    }
-
-    gotoAdminEntry() {
-        console.log("Open Admin Portal");
-    }
-
     render() {
         return (
             <Layout>
-                <Container style={{marginTop:'50px'}}>
+                <Container style={{marginTop:'50px', marginBottom:'100px'}}>
                 <div style={{marginBottom:'40px'}}>
-                    <h2>Welcome to Medi-Sharing System</h2>
+                    <h2>Welcome to Smart Assistant Administration System</h2>
+                    <h4>This is only a demo page for different group of people</h4>
                 </div>
 
-                <Link route={'/user'}>
-                    <a>
-                        <Button 
-                            content="User"
-                            icon = "user"
-                            size='huge'
-                            primary
-                            style={{width:'30%', height:'100px', marginRight:'20px'}}
-                            />
-                    </a>
-                </Link>
-                <Link route={'/admin'}>
-                    <a>
-                        <Button 
-                            content="Admin"
-                            icon = "user"
-                            size='huge'
-                            primary
-                            style={{width:'30%', height:'100px', marginLeft:'20px'}}
-                            />
-                    </a>
-                </Link>
+                <div>
+                    <Link route={'/user'}>
+                        <a>
+                            <Button 
+                                content="Medi-Sharing Plan"
+                                icon = "blind"
+                                size='huge'
+                                primary
+                                style={{width:'30%', height:'100px', marginRight:'20px'}}
+                                />
+                        </a>
+                    </Link>
+
+                    <Link route={'/hospital'}>
+                        <a>
+                            <Button 
+                                content="Hospital"
+                                icon = "hospital"
+                                size='huge'
+                                primary 
+                                style={{width:'30%', height:'100px', marginLeft:'20px'}}
+                                />
+                        </a>
+                    </Link>
+                </div>
+
+                <div style={{marginTop:'40px'}}>
+                    <Link route={'/service_provider'}>
+                        <a>
+                            <Button 
+                                content="Service Provider"
+                                icon = "address card"
+                                size='huge'
+                                primary 
+                                style={{width:'30%', height:'100px', marginRight:'20px'}}
+                                />
+                        </a>
+                    </Link>
+                    
+                    <Link route={'/government'}>
+                        <a>
+                            <Button 
+                                content="Government(CC)"
+                                icon = "closed captioning"
+                                size='huge'
+                                primary 
+                                style={{width:'30%', height:'100px', marginLeft:'20px'}}
+                                />
+                        </a>
+                    </Link>
+                </div>
+
+                <div style={{marginTop:'40px'}}>
+                    <Link route={'/admin'}>
+                        <a>
+                            <Button 
+                                content="Administrator"
+                                icon = "user"
+                                size='huge'
+                                primary 
+                                style={{width:'30%', height:'100px'}}
+                                />
+                        </a>
+                    </Link>
+                </div>
                 </Container>
             </Layout>
         );

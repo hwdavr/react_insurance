@@ -1,12 +1,14 @@
 import React from 'react';
-import {Container, Divider} from 'semantic-ui-react';
+import Header from './Header';
+import {Container} from 'semantic-ui-react';
 import Head from 'next/head';
 import logo from '../../assets/thales@2x.png'; // import images
 import '../Layout.css';
+import { Router } from '../../routes';
 
 export default (props) => {
     return (
-        <Container className='main-header-container'>
+        <Container className='header-container'>
             <Head>
                 <link
                 rel="stylesheet"
@@ -14,7 +16,11 @@ export default (props) => {
                 />
             </Head>
 
-            <div className='app-title-container'>
+            <div onClick={() => {
+                    console.log('Go to home page.');
+                    Router.push('/');
+                } } 
+                className='app-title-container'>
                 <div style={{display:'inline'}}>
                     <h1 className='app-title'>S</h1>
                     <h2 className='app-title'>MART </h2>
@@ -29,8 +35,7 @@ export default (props) => {
                 <img src={logo} style={{height:'44px'}}/>
             </div>
 
-            <Divider fitted></Divider>
-            
+            <Header />
             {props.children}
         </Container>
     );

@@ -6,6 +6,7 @@
     "@zeit/next-css": "^1.0.1",
     "fs-extra": "^7.0.1",
     "ganache-cli": "^6.3.0",
+    "google-map-react": "^1.1.4",
     "mocha": "^6.0.2",
     "next": "^8.0.3",
     "next-images": "^1.1.1",
